@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>开国皇帝查询</title>
+</head>
+<body>
+<h3>输入朝代，查询开国皇帝</h3>
+<input id="inp" placeholder="例如：秦朝">
+<button onclick="query()">查询</button>
+<div id="res"></div>
+<script>
+let data = {
+"秦朝":"嬴政",
+"西汉":"刘邦",
+"东汉":"刘秀",
+"西晋":"司马炎",
+"隋朝":"杨坚",
+"唐朝":"李渊",
+"北宋":"赵匡胤",
+"元朝":"忽必烈",
+"明朝":"朱元璋",
+"清朝":"皇太极"
+};
+function query(){
+    let name = document.getElementById("inp").value;
+    if(data[name]){
+        document.getElementById("res").innerText = data[name];
+    }else{
+        document.getElementById("res").innerText = "没有这个朝代";
+    }
+}
+</script>
+</body>
+</html>
